@@ -16,7 +16,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p><strong>Kolekcja,<br/>która mówi<br/>sama za siebie.</strong></p>",
+            "text": "<p><strong>Kolekcja, która mówi sama za siebie.</strong></p>",
             "width": "fill",
             "max_width": "normal",
             "alignment": "left",
@@ -42,7 +42,7 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Odkryj kolekcję",
+            "label": "Wszystkie produkty",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
             "style_class": "button-primary",
