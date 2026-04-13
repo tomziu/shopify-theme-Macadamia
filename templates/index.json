@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "hero_mac_1": {
       "type": "hero",
@@ -15,7 +16,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p>Kolekcja,<br>która mówi<br>sama za siebie.</p>",
+            "text": "<p><strong>Kolekcja,<br/>która mówi<br/>sama za siebie.</strong></p>",
             "width": "fill",
             "max_width": "normal",
             "alignment": "left",
@@ -53,15 +54,20 @@
           "blocks": {}
         }
       },
-      "block_order": ["text_mac_1a", "button_mac_1b"],
+      "block_order": [
+        "text_mac_1a",
+        "button_mac_1b"
+      ],
       "name": "Hero",
       "settings": {
         "media_type_1": "image",
+        "image_1": "shopify://shop_images/Whisk_99b63d8eba78fc49332415b51c8df578dr.jpg",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
         "media_type_1_mobile": "image",
         "media_type_2_mobile": "image",
+        "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -92,7 +98,10 @@
           "type": "text",
           "name": "Tekst",
           "settings": {
-            "text": "<p>Nowa Kolekcja — Wiosna / Lato 2025 — Macadamia Boutique — Elegancja w każdym detalu — </p>",
+            "text": "<p>Nowa Kolekcja — Wiosna / Lato 2026 — Macadamia Boutique — Elegancja w każdym detalu — </p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "custom",
             "font": "var(--font-body--family)",
             "font_size": "0.75rem",
@@ -100,18 +109,28 @@
             "letter_spacing": "0.15em",
             "case": "uppercase",
             "wrap": "nowrap",
-            "width": "fit-content"
-          }
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
-      "block_order": ["marquee_item_mac_2a"],
+      "block_order": [
+        "marquee_item_mac_2a"
+      ],
       "name": "Marquee",
       "settings": {
-        "gap_between_elements": 48,
         "movement_direction": "left",
         "color_scheme": "scheme-4",
         "padding-block-start": 16,
-        "padding-block-end": 16
+        "padding-block-end": 16,
+        "gap_between_elements": 48
       }
     },
     "collection_list_mac_3": {
@@ -122,30 +141,27 @@
           "name": "t:names.collection_card",
           "static": true,
           "settings": {
-            "image_ratio": "portrait",
-            "image_crop": "center",
-            "card_layout": "image-bg",
-            "content_alignment": "bottom-left",
+            "placement": "on_image",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "collection_card_gap": 8,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "border_radius": 0
           },
           "blocks": {
             "collection_title_mac": {
               "type": "_inline-collection-title",
               "name": "Tytuł kolekcji",
               "settings": {
-                "type_preset": "h4",
                 "font": "var(--font-heading--family)",
-                "font_size": "",
+                "weight": "",
+                "line_height": "normal",
                 "letter_spacing": "-0.01em",
-                "case": "none",
-                "color": "var(--color-foreground-heading)"
+                "case": "none"
               },
               "blocks": {}
             },
@@ -153,28 +169,76 @@
               "type": "_collection-link",
               "name": "Link",
               "settings": {
-                "label": "Zobacz kolekcję",
-                "style_class": "button-secondary"
+                "show_count": true
+              },
+              "blocks": {
+                "title": {
+                  "type": "_inline-collection-title",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {
+                    "font": "var(--font-heading--family)",
+                    "weight": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "uppercase"
+                  },
+                  "blocks": {}
+                },
+                "image": {
+                  "type": "_image",
+                  "static": true,
+                  "settings": {
+                    "height": "large",
+                    "ratio": "portrait",
+                    "border_radius": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "collection-card-image": {
+              "type": "_collection-card-image",
+              "static": true,
+              "settings": {
+                "image_ratio": "portrait",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0
               },
               "blocks": {}
             }
           },
-          "block_order": ["collection_title_mac", "collection_link_mac"]
+          "block_order": [
+            "collection_title_mac",
+            "collection_link_mac"
+          ]
         }
       },
       "name": "Kolekcje",
       "settings": {
+        "collection_list": [
+          "nowosci",
+          "wiosna-2026"
+        ],
         "layout_type": "grid",
-        "max_collections": 3,
+        "carousel_on_mobile": true,
         "columns": 3,
         "mobile_columns": "1",
+        "mobile_card_size": "60cqw",
         "columns_gap": 8,
+        "bento_gap": 8,
         "rows_gap": 8,
-        "carousel_on_mobile": true,
+        "max_collections": 3,
         "icons_style": "arrow",
         "icons_shape": "none",
         "section_width": "page-width",
-        "horizontal_alignment": "flex-start",
         "gap": 48,
         "color_scheme": "scheme-1",
         "padding-block-start": 96,
@@ -184,109 +248,41 @@
     "media_content_mac_4": {
       "type": "media-with-content",
       "blocks": {
-        "media_mac_4": {
+        "media": {
           "type": "_media-without-appearance",
-          "id": "media",
-          "name": "Media",
           "static": true,
           "settings": {
             "media_type": "image",
-            "image_position": "center",
-            "media_height": "80svh",
-            "overlay": false,
-            "overlay_color": "#00000026",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0
+            "image": "shopify://shop_images/Whisk_5996b3cb4f4ff4daa18469d1a3502e69dr.jpg",
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
+            "image_position": "cover",
+            "video_position": "cover"
           },
           "blocks": {}
         },
-        "content_mac_4": {
+        "content": {
           "type": "_content-without-appearance",
-          "id": "content",
-          "name": "Treść",
           "static": true,
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "flex-start",
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "flex-start",
-            "gap": 24,
-            "inherit_color_scheme": true,
-            "color_scheme": "scheme-2",
-            "padding-block-start": 48,
-            "padding-block-end": 48,
-            "padding-inline-start": 48,
-            "padding-inline-end": 48
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24
           },
           "blocks": {
-            "label_mac_4a": {
+            "text_Yq4pCi": {
               "type": "text",
-              "name": "Etykieta",
+              "name": "t:names.text",
               "settings": {
-                "text": "<p>Nowa kolekcja</p>",
-                "width": "fill",
+                "text": "<p><strong>SELEKCJA PREMIUM</strong></p><h2>Must-Have <br/><em>Sezonu</em></h2><p>Odkryj projekty, które skradły serca naszych klientek. Ponadczasowe kroje, które stają się fundamentem nowoczesnej garderoby. Każdy element został starannie wyselekcjonowany, by podkreślić Twój unikalny styl.</p>",
+                "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "label",
-                "font": "var(--font-body--family)",
-                "font_size": "0.75rem",
-                "line_height": "1.5",
-                "letter_spacing": "0.1em",
-                "case": "uppercase",
-                "wrap": "pretty",
-                "color": "#745c00",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "heading_mac_4b": {
-              "type": "text",
-              "name": "Nagłówek",
-              "settings": {
-                "text": "<p>Każdy detal<br>opowiada historię.</p>",
-                "width": "fill",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h2",
-                "font": "var(--font-heading--family)",
-                "font_size": "",
-                "line_height": "1.1",
-                "letter_spacing": "-0.02em",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground-heading)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "body_mac_4c": {
-              "type": "text",
-              "name": "Opis",
-              "settings": {
-                "text": "<p>Starannie dobrane tkaniny, precyzyjne kroje i ponadczasowe wzornictwo — to esencja Macadamia. Każda sztuka to wyraz rzemiosła i pasji do mody.</p>",
-                "width": "fill",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "body",
+                "type_preset": "rte",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
-                "line_height": "1.6",
+                "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
@@ -300,33 +296,20 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
-            },
-            "button_mac_4d": {
-              "type": "button",
-              "name": "CTA",
-              "settings": {
-                "label": "Odkryj nowości",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button-primary",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
             }
           },
-          "block_order": ["label_mac_4a", "heading_mac_4b", "body_mac_4c", "button_mac_4d"]
+          "block_order": [
+            "text_Yq4pCi"
+          ]
         }
       },
       "name": "Nowa kolekcja",
       "settings": {
         "media_position": "left",
         "media_width": "wide",
-        "extend_media": true,
         "media_height": "80svh",
         "section_width": "page-width",
+        "extend_media": true,
         "color_scheme": "scheme-2",
         "padding-block-start": 0,
         "padding-block-end": 0
@@ -410,7 +393,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_list_text_mac", "product_list_button_mac"]
+          "block_order": [
+            "product_list_text_mac",
+            "product_list_button_mac"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -495,7 +481,11 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_mac", "product_title_mac", "price_mac"]
+          "block_order": [
+            "product_card_gallery_mac",
+            "product_title_mac",
+            "price_mac"
+          ]
         }
       },
       "name": "Bestsellery",
@@ -522,149 +512,37 @@
     "media_content_mac_6": {
       "type": "media-with-content",
       "blocks": {
-        "media_mac_6": {
+        "media": {
           "type": "_media-without-appearance",
-          "id": "media",
-          "name": "Media",
           "static": true,
           "settings": {
             "media_type": "image",
-            "image_position": "center",
-            "media_height": "70svh",
-            "overlay": false,
-            "overlay_color": "#00000026",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
+            "image_position": "cover",
+            "video_position": "cover"
           },
           "blocks": {}
         },
-        "content_mac_6": {
+        "content": {
           "type": "_content-without-appearance",
-          "id": "content",
-          "name": "Treść",
           "static": true,
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 24,
-            "inherit_color_scheme": true,
-            "color_scheme": "scheme-1",
-            "padding-block-start": 64,
-            "padding-block-end": 64,
-            "padding-inline-start": 48,
-            "padding-inline-end": 48
+            "gap": 24
           },
-          "blocks": {
-            "label_mac_6a": {
-              "type": "text",
-              "name": "Etykieta",
-              "settings": {
-                "text": "<p>O marce</p>",
-                "width": "fill",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "label",
-                "font": "var(--font-body--family)",
-                "font_size": "0.75rem",
-                "line_height": "1.5",
-                "letter_spacing": "0.1em",
-                "case": "uppercase",
-                "wrap": "pretty",
-                "color": "#745c00",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "heading_mac_6b": {
-              "type": "text",
-              "name": "Nagłówek",
-              "settings": {
-                "text": "<p>Stworzone<br>z myślą o Tobie.</p>",
-                "width": "fill",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h2",
-                "font": "var(--font-heading--family)",
-                "font_size": "",
-                "line_height": "1.1",
-                "letter_spacing": "-0.02em",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground-heading)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "body_mac_6c": {
-              "type": "text",
-              "name": "Opis",
-              "settings": {
-                "text": "<p>Macadamia to więcej niż marka — to filozofia ubioru. Wierzymy, że odzież powinna być wyrazem osobowości, nie kompromisem. Każda kolekcja powstaje z dbałością o środowisko i szacunkiem do rzemiosła.</p>",
-                "width": "fill",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "body",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "1.6",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button_mac_6d": {
-              "type": "button",
-              "name": "CTA",
-              "settings": {
-                "label": "Nasza historia",
-                "link": "/pages/about",
-                "open_in_new_tab": false,
-                "style_class": "button-secondary",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": ["label_mac_6a", "heading_mac_6b", "body_mac_6c", "button_mac_6d"]
+          "blocks": {}
         }
       },
       "name": "O marce",
       "settings": {
         "media_position": "right",
         "media_width": "wide",
-        "extend_media": true,
         "media_height": "70svh",
         "section_width": "page-width",
+        "extend_media": true,
         "color_scheme": "scheme-1",
         "padding-block-start": 0,
         "padding-block-end": 0
@@ -729,18 +607,34 @@
           "type": "email-signup",
           "name": "Formularz e-mail",
           "settings": {
-            "placeholder": "Twój adres e-mail",
-            "button_label": "Zapisz się",
-            "success_message": "Dziękujemy! Jesteś na liście.",
             "width": "fit-content",
             "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "heading": "",
+            "heading_preset": "h3",
+            "border_style": "all",
+            "border_width": 1,
+            "border_radius": 100,
+            "input_type_preset": "paragraph",
+            "style_class": "button",
+            "display_type": "text",
+            "label": "Zarejestruj się",
+            "integrated_button": false,
+            "button_type_preset": "paragraph",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {}
         }
       },
-      "block_order": ["text_mac_7a", "text_mac_7b", "email_mac_7c"],
+      "block_order": [
+        "text_mac_7a",
+        "text_mac_7b",
+        "email_mac_7c"
+      ],
       "name": "Newsletter",
       "settings": {
         "content_direction": "column",
@@ -752,7 +646,20 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 32,
         "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
         "color_scheme": "scheme-5",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
         "padding-block-start": 100,
         "padding-block-end": 100
       }
