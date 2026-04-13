@@ -253,7 +253,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/Whisk_5996b3cb4f4ff4daa18469d1a3502e69dr.jpg",
+            "image": "shopify://shop_images/czarna_graf.jpg",
             "link": "",
             "video_loop": true,
             "video_autoplay": false,
@@ -517,6 +517,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/roz_2dd7df0b-8142-410b-943f-8101ce45da92.jpg",
             "link": "",
             "video_loop": true,
             "video_autoplay": false,
@@ -533,7 +534,37 @@
             "vertical_alignment_flex_direction_column": "center",
             "gap": 24
           },
-          "blocks": {}
+          "blocks": {
+            "text_tNEPAc": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<h1>Sztuka <br/><em>Prostoty.</em></h1><p>Nasza najnowsza kolekcja to manifestacja czystej formy i rzemiosła najwyższej próby. Stworzona dla kobiet, które wiedzą, że mniej znaczy więcej.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_tNEPAc"
+          ]
         }
       },
       "name": "O marce",
