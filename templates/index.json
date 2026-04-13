@@ -501,14 +501,14 @@
       "name": "Bestsellery",
       "settings": {
         "collection": "all",
-        "layout_type": "editorial",
+        "layout_type": "carousel",
         "carousel_on_mobile": true,
         "max_products": 6,
-        "columns": 3,
+        "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "65cqw",
-        "columns_gap": 8,
-        "rows_gap": 8,
+        "columns_gap": 16,
+        "rows_gap": 16,
         "icons_style": "arrow",
         "icons_shape": "none",
         "section_width": "page-width",
@@ -760,10 +760,10 @@
   },
   "order": [
     "hero_mac_1",
+    "product_list_mac_5",
     "marquee_mac_2",
     "collection_list_mac_3",
     "media_content_mac_4",
-    "product_list_mac_5",
     "media_content_mac_6",
     "section_newsletter_mac_7"
   ]
