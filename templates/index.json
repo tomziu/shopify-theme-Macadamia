@@ -12,22 +12,48 @@
     "hero_mac_1": {
       "type": "hero",
       "blocks": {
-        "text_mac_1a": {
+        "eyebrow_mac_1a": {
+          "type": "text",
+          "name": "Eyebrow",
+          "settings": {
+            "text": "<p>Nowa Kolekcja — Wiosna / Lato 2026</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "0.7rem",
+            "line_height": "1.4",
+            "letter_spacing": "0.18em",
+            "case": "uppercase",
+            "wrap": "nowrap",
+            "color": "#c9a84c",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 12,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_mac_1b": {
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p><strong>Kolekcja, która mówi sama za siebie.</strong></p>",
+            "text": "<p>Kolekcja, która mówi sama za siebie.</p>",
             "width": "fill",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "h1",
+            "type_preset": "custom",
             "font": "var(--font-heading--family)",
-            "font_size": "clamp(3rem, 8vw, 7rem)",
-            "line_height": "1.05",
+            "font_size": "clamp(2.8rem, 7vw, 6.5rem)",
+            "line_height": "1.0",
             "letter_spacing": "-0.02em",
             "case": "none",
             "wrap": "pretty",
-            "color": "var(--color-foreground-heading)",
+            "color": "#fff6f0",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -38,11 +64,11 @@
           },
           "blocks": {}
         },
-        "button_mac_1b": {
+        "button_mac_1c": {
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Wszystkie produkty",
+            "label": "Odkryj kolekcję",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
             "style_class": "button-primary",
@@ -55,8 +81,9 @@
         }
       },
       "block_order": [
-        "text_mac_1a",
-        "button_mac_1b"
+        "eyebrow_mac_1a",
+        "text_mac_1b",
+        "button_mac_1c"
       ],
       "name": "Hero",
       "settings": {
@@ -76,7 +103,7 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 32,
+        "gap": 20,
         "section_width": "full-width",
         "section_height": "large",
         "section_height_custom": 90,
